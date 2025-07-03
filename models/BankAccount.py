@@ -1,7 +1,7 @@
 from datetime import datetime
 class BankAccount:
     def __init__(self,account_number,account_holder,balance):
-        self.__account_number=account_number
+        self.account_number=account_number
         self.account_holder=account_holder
         self.__balance=balance
         self.transactions=[]
@@ -30,4 +30,11 @@ class BankAccount:
         print(f"\nTransaction History for {self.account_holder}:")
         for t in self.transactions:
             print(t)
+    
+    def display(self):
+        print(f"\n--- Account Info ---")
+        print(f"Account Number: {self.account_number}")
+        print(f"Name: {self.account_holder}")
+        print(f"Balance: ${self.get_balance()}")
+            
 
